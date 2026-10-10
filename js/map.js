@@ -1,9 +1,11 @@
-// Fond de carte minimaliste CartoDB
-const darkTileUrl = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
-const lightTileUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
-const tileAttribution = '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a> | <b>Barde</b>';
+// --- Configuration des tuiles minimalistes Gratuites & Sans Clé API ---
+const darkTileUrl = 'https://a.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}{r}.png';
+const lightTileUrl = 'https://a.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}{r}.png';
+const tileAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a> | <b>Barde</b>';
 
-const map = L.map('map', { zoomControl: false }).setView([43.2965, 5.3698], 13);
+const map = L.map('map', { 
+  zoomControl: false 
+}).setView([43.2965, 5.3698], 13);
 
 let currentTileLayer = L.tileLayer(darkTileUrl, {
   maxZoom: 19,
@@ -13,6 +15,7 @@ let currentTileLayer = L.tileLayer(darkTileUrl, {
 
 L.control.zoom({ position: 'topright' }).addTo(map);
 
+// Bascule de thème Sombre / Clair
 let isDarkMode = true;
 const themeBtn = document.getElementById('btn-theme');
 
@@ -33,6 +36,7 @@ if (themeBtn) {
 
 const markersLayer = L.layerGroup().addTo(map);
 
+// Icônes agrandies (44px x 44px)
 function createBardeIcon(place) {
   let iconHtml = '🎵';
   let className = 'barde-marker';
@@ -60,6 +64,7 @@ function createBardeIcon(place) {
 let allPlaces = [];
 let userCoords = null;
 
+// Chargement des lieux depuis places.json
 fetch('./data/places.json')
   .then(response => response.json())
   .then(data => {
@@ -91,7 +96,7 @@ function renderMarkers(places) {
   });
 }
 
-// Calcul de distance (Haversine)
+// Calcul de distance (Formule de Haversine)
 function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
   const R = 6371;
   const dLat = (lat2 - lat1) * (Math.PI / 180);
@@ -109,7 +114,7 @@ function formatDistance(km) {
   return `à ~${km.toFixed(1)} km de vous`;
 }
 
-// Gestion des favoris
+// Gestion des favoris (LocalStorage)
 function isFavorite(id) {
   const favs = JSON.parse(localStorage.getItem('barde_favorites') || '[]');
   return favs.includes(id);
@@ -127,6 +132,7 @@ function toggleFavorite(id) {
   if (currentPlace) showPlaceDetails(currentPlace);
 }
 
+// Partage natif ou copie presse-papier
 function sharePlace(name, address) {
   if (navigator.share) {
     navigator.share({
@@ -135,11 +141,12 @@ function sharePlace(name, address) {
       url: window.location.href
     }).catch(err => console.log(err));
   } else {
-    navigator.clipboard.writeText(`${name} - ${address}`);
+    navigator.clipboard.writeText(`${name} -${address}`);
     alert("Adresse copiée dans le presse-papier !");
   }
 }
 
+// Affichage du panneau de détails
 function showPlaceDetails(place) {
   const panel = document.getElementById('place-panel');
   const panelContent = document.getElementById('panel-content');
@@ -165,17 +172,16 @@ function showPlaceDetails(place) {
         <button onclick="closePanel()" class="btn-close">✕</button>
       </div>
     </div>
-    <p class="neighborhood">📍 ${place.neighborhood || place.address}</p>
-    ${distanceHtml}
+    <p class="neighborhood">📍 ${place.neighborhood \vert{}\vert{} place.address}</p>${distanceHtml}
     <div class="badges">
-      ${tempBadge} ${intimateBadge} ${tagsHtml}
+      ${tempBadge} ${intimateBadge}${tagsHtml}
     </div>
     <p class="description">${place.description || ''}</p>
     <p class="capacity">👥 Capacité : ${place.capacity ? place.capacity + ' pers.' : 'Non spécifiée'}</p>
     
     <div class="panel-links">
       <a href="${mapsNavUrl}" target="_blank" rel="noopener" class="btn btn-nav">🗺️ Y aller</a>
-      <button onclick="sharePlace('${place.name.replace(/'/g, "\'")}', '${place.address.replace(/'/g, "\'")}')" class="btn btn-share">📲 Partager</button>
+      <button onclick="sharePlace('${place.name.replace(/'/g, "\\'")}', '${place.address.replace(/'/g, "\\'")}')" class="btn btn-share">📲 Partager</button>
       ${place.links.program ? `<a href="${place.links.program}" target="_blank" rel="noopener" class="btn btn-primary">📅 Program</a>` : ''}
       ${place.links.instagram ? `<a href="${place.links.instagram}" target="_blank" rel="noopener" class="btn btn-secondary">📸 Insta</a>` : ''}
     </div>
@@ -194,7 +200,7 @@ function closePanel() {
   panel.style.transform = '';
 }
 
-// Swipe logic
+// Geste Swipe-to-close sur mobile
 const panel = document.getElementById('place-panel');
 let startY = 0;
 let currentY = 0;
@@ -211,72 +217,4 @@ panel.addEventListener('touchmove', (e) => {
   if (!isDragging) return;
   currentY = e.touches[0].clientY;
   const deltaY = currentY - startY;
-  if (deltaY > 0) panel.style.transform = `translateY(${deltaY}px)`;
-}, { passive: true });
-
-panel.addEventListener('touchend', () => {
-  if (!isDragging) return;
-  isDragging = false;
-  panel.classList.remove('dragging');
-  const deltaY = currentY - startY;
-  if (deltaY > 100) closePanel();
-  else panel.style.transform = '';
-  startY = 0;
-  currentY = 0;
-});
-
-// GPS
-let userMarker = null;
-let userAccuracyCircle = null;
-const locateBtn = document.getElementById('btn-locate');
-
-if (locateBtn) {
-  locateBtn.addEventListener('click', () => {
-    if (!navigator.geolocation) {
-      alert("La géolocalisation n'est pas supportée par votre navigateur.");
-      return;
-    }
-
-    locateBtn.style.opacity = '0.6';
-
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        locateBtn.style.opacity = '1';
-        const lat = position.coords.latitude;
-        const lng = position.coords.longitude;
-        const accuracy = position.coords.accuracy;
-
-        userCoords = [lat, lng];
-        map.setView([lat, lng], 15);
-
-        if (userMarker) {
-          map.removeLayer(userMarker);
-          map.removeLayer(userAccuracyCircle);
-        }
-
-        userAccuracyCircle = L.circle([lat, lng], {
-          radius: accuracy,
-          color: '#3498db',
-          fillColor: '#3498db',
-          fillOpacity: 0.15,
-          weight: 1
-        }).addTo(map);
-
-        const userIcon = L.divIcon({
-          html: `<div class="user-gps-dot"></div>`,
-          className: 'user-gps-marker',
-          iconSize: [20, 20],
-          iconAnchor: [10, 10]
-        });
-
-        userMarker = L.marker([lat, lng], { icon: userIcon }).addTo(map);
-        userMarker.bindPopup("<b>Vous êtes ici</b>").openPopup();
-      },
-      (error) => {
-        locateBtn.style.opacity = '1';
-        alert("Impossible de récupérer votre position.");
-      },
-      { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
-    );
-  });
-}
+  if (deltaY > 0) panel.style.transform = `translateY
