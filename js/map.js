@@ -1,13 +1,35 @@
-const map = L.map('map', {
-  zoomControl: false
-}).setView([43.2965, 5.3698], 13);
+// Fond de carte minimaliste CartoDB
+const darkTileUrl = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+const lightTileUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+const tileAttribution = '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a> | <b>Barde</b>';
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+const map = L.map('map', { zoomControl: false }).setView([43.2965, 5.3698], 13);
+
+let currentTileLayer = L.tileLayer(darkTileUrl, {
   maxZoom: 19,
-  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | <b>Barde</b>'
+  subdomains: 'abcd',
+  attribution: tileAttribution
 }).addTo(map);
 
 L.control.zoom({ position: 'topright' }).addTo(map);
+
+let isDarkMode = true;
+const themeBtn = document.getElementById('btn-theme');
+
+if (themeBtn) {
+  themeBtn.addEventListener('click', () => {
+    map.removeLayer(currentTileLayer);
+    if (isDarkMode) {
+      currentTileLayer = L.tileLayer(lightTileUrl, { maxZoom: 19, subdomains: 'abcd', attribution: tileAttribution }).addTo(map);
+      themeBtn.textContent = '☀️';
+      isDarkMode = false;
+    } else {
+      currentTileLayer = L.tileLayer(darkTileUrl, { maxZoom: 19, subdomains: 'abcd', attribution: tileAttribution }).addTo(map);
+      themeBtn.textContent = '🌙';
+      isDarkMode = true;
+    }
+  });
+}
 
 const markersLayer = L.layerGroup().addTo(map);
 
@@ -30,12 +52,13 @@ function createBardeIcon(place) {
   return L.divIcon({
     html: `<div class="marker-inner">${iconHtml}</div>`,
     className: className,
-    iconSize: [32, 32],
-    iconAnchor: [16, 32]
+    iconSize: [44, 44],
+    iconAnchor: [22, 44]
   });
 }
 
 let allPlaces = [];
+let userCoords = null;
 
 fetch('./data/places.json')
   .then(response => response.json())
@@ -47,8 +70,17 @@ fetch('./data/places.json')
     });
   });
 
+function updatePlacesCount(count) {
+  const countBadge = document.getElementById('places-count');
+  if (countBadge) {
+    countBadge.textContent = count > 1 ? `${count} lieux` : `${count} lieu`;
+  }
+}
+
 function renderMarkers(places) {
   markersLayer.clearLayers();
+  updatePlacesCount(places.length);
+
   places.forEach(place => {
     const marker = L.marker([place.lat, place.lng], {
       icon: createBardeIcon(place)
@@ -59,6 +91,55 @@ function renderMarkers(places) {
   });
 }
 
+// Calcul de distance (Haversine)
+function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * (Math.PI / 180);
+  const dLon = (lon2 - lon1) * (Math.PI / 180);
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) *
+    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return R * c;
+}
+
+function formatDistance(km) {
+  if (km < 1) return `à ~${Math.round(km * 1000)} m de vous`;
+  return `à ~${km.toFixed(1)} km de vous`;
+}
+
+// Gestion des favoris
+function isFavorite(id) {
+  const favs = JSON.parse(localStorage.getItem('barde_favorites') || '[]');
+  return favs.includes(id);
+}
+
+function toggleFavorite(id) {
+  let favs = JSON.parse(localStorage.getItem('barde_favorites') || '[]');
+  if (favs.includes(id)) {
+    favs = favs.filter(f => f !== id);
+  } else {
+    favs.push(id);
+  }
+  localStorage.setItem('barde_favorites', JSON.stringify(favs));
+  const currentPlace = allPlaces.find(p => p.id === id);
+  if (currentPlace) showPlaceDetails(currentPlace);
+}
+
+function sharePlace(name, address) {
+  if (navigator.share) {
+    navigator.share({
+      title: name,
+      text: `Découvre ${name} à Marseille sur Barde !`,
+      url: window.location.href
+    }).catch(err => console.log(err));
+  } else {
+    navigator.clipboard.writeText(`${name} - ${address}`);
+    alert("Adresse copiée dans le presse-papier !");
+  }
+}
+
 function showPlaceDetails(place) {
   const panel = document.getElementById('place-panel');
   const panelContent = document.getElementById('panel-content');
@@ -66,13 +147,26 @@ function showPlaceDetails(place) {
   const tagsHtml = place.genres.map(g => `<span class="badge">${g}</span>`).join(' ');
   const tempBadge = place.is_temporary ? '<span class="badge badge-warning">📍 Éphémère</span>' : '';
   const intimateBadge = place.is_intimate ? '<span class="badge badge-info">🏠 Intimiste</span>' : '';
+  const favIcon = isFavorite(place.id) ? '❤️' : '🤍';
+
+  let distanceHtml = '';
+  if (userCoords) {
+    const distKm = getDistanceFromLatLonInKm(userCoords[0], userCoords[1], place.lat, place.lng);
+    distanceHtml = `<div class="distance-badge">📍 ${formatDistance(distKm)}</div>`;
+  }
+
+  const mapsNavUrl = `https://www.google.com/maps/dir/?api=1&destination=${place.lat},${place.lng}`;
   
   panelContent.innerHTML = `
     <div class="panel-header">
       <h2>${place.name}</h2>
-      <button onclick="closePanel()" class="btn-close">✕</button>
+      <div class="panel-header-actions">
+        <button onclick="toggleFavorite('${place.id}')" class="btn-fav" title="Mettre en favori">${favIcon}</button>
+        <button onclick="closePanel()" class="btn-close">✕</button>
+      </div>
     </div>
     <p class="neighborhood">📍 ${place.neighborhood || place.address}</p>
+    ${distanceHtml}
     <div class="badges">
       ${tempBadge} ${intimateBadge} ${tagsHtml}
     </div>
@@ -80,9 +174,10 @@ function showPlaceDetails(place) {
     <p class="capacity">👥 Capacité : ${place.capacity ? place.capacity + ' pers.' : 'Non spécifiée'}</p>
     
     <div class="panel-links">
-      ${place.links.program ? `<a href="${place.links.program}" target="_blank" class="btn btn-primary">📅 Program</a>` : ''}
-      ${place.links.instagram ? `<a href="${place.links.instagram}" target="_blank" class="btn btn-secondary">📸 Insta</a>` : ''}
-      ${place.links.website ? `<a href="${place.links.website}" target="_blank" class="btn btn-outline">🌐 Site</a>` : ''}
+      <a href="${mapsNavUrl}" target="_blank" rel="noopener" class="btn btn-nav">🗺️ Y aller</a>
+      <button onclick="sharePlace('${place.name.replace(/'/g, "\'")}', '${place.address.replace(/'/g, "\'")}')" class="btn btn-share">📲 Partager</button>
+      ${place.links.program ? `<a href="${place.links.program}" target="_blank" rel="noopener" class="btn btn-primary">📅 Program</a>` : ''}
+      ${place.links.instagram ? `<a href="${place.links.instagram}" target="_blank" rel="noopener" class="btn btn-secondary">📸 Insta</a>` : ''}
     </div>
     
     <div class="panel-footer">
@@ -116,9 +211,7 @@ panel.addEventListener('touchmove', (e) => {
   if (!isDragging) return;
   currentY = e.touches[0].clientY;
   const deltaY = currentY - startY;
-  if (deltaY > 0) {
-    panel.style.transform = `translateY(${deltaY}px)`;
-  }
+  if (deltaY > 0) panel.style.transform = `translateY(${deltaY}px)`;
 }, { passive: true });
 
 panel.addEventListener('touchend', () => {
@@ -126,11 +219,8 @@ panel.addEventListener('touchend', () => {
   isDragging = false;
   panel.classList.remove('dragging');
   const deltaY = currentY - startY;
-  if (deltaY > 100) {
-    closePanel();
-  } else {
-    panel.style.transform = '';
-  }
+  if (deltaY > 100) closePanel();
+  else panel.style.transform = '';
   startY = 0;
   currentY = 0;
 });
@@ -156,6 +246,7 @@ if (locateBtn) {
         const lng = position.coords.longitude;
         const accuracy = position.coords.accuracy;
 
+        userCoords = [lat, lng];
         map.setView([lat, lng], 15);
 
         if (userMarker) {
