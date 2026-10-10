@@ -18,8 +18,8 @@
       "instagram": "https://www.instagram.com/lemolotovmarseille/",
       "website": "https://lemolotov.com/"
     },
-    "description": "Scène alternative mythique du Cours Julien.",
-    "last_checked": "2026-10-10"
+    "description": "Scène alternative mythique et indépendante du Cours Julien.",
+    "last_checked": "2026-10-11"
   },
   {
     "id": "espace-julien",
@@ -40,29 +40,8 @@
       "instagram": "https://www.instagram.com/espacejulienmarseille/",
       "website": "https://www.espace-julien.com/"
     },
-    "description": "Grande scène de musiques actuelles au cœur de la Plaine/Cours Ju.",
-    "last_checked": "2026-10-10"
-  },
-  {
-    "id": "cafe-julien",
-    "name": "Café Julien",
-    "status": "active",
-    "address": "39 Cours Julien, 13006 Marseille",
-    "neighborhood": "Cours Julien",
-    "lat": 43.2926,
-    "lng": 5.3839,
-    "categories": ["bar_musical", "concert"],
-    "genres": ["Indie", "Pop", "Jazz", "Acoustique"],
-    "capacity": 150,
-    "is_temporary": false,
-    "is_intimate": true,
-    "is_outdoor": false,
-    "links": {
-      "instagram": "https://www.instagram.com/espacejulienmarseille/",
-      "website": "https://www.espace-julien.com/"
-    },
-    "description": "Foyer/club intimiste adjacent à l'Espace Julien pour des formats plus réduits.",
-    "last_checked": "2026-10-10"
+    "description": "Scène de musiques actuelles incontournable du centre-ville.",
+    "last_checked": "2026-10-11"
   },
   {
     "id": "l-intermediaire",
@@ -82,8 +61,8 @@
       "instagram": "https://www.instagram.com/lintermediaire_live/",
       "website": ""
     },
-    "description": "Bar-concert historique de La Plaine accueillant groupes locaux et jams.",
-    "last_checked": "2026-10-10"
+    "description": "Bar-concert historique de La Plaine accueillant jams et groupes locaux.",
+    "last_checked": "2026-10-11"
   },
   {
     "id": "la-meson",
@@ -105,7 +84,7 @@
       "website": "https://lameson.com/"
     },
     "description": "Salle intimiste dédiée au flamenco, world et acoustique.",
-    "last_checked": "2026-10-10"
+    "last_checked": "2026-10-11"
   },
   {
     "id": "le-makeba",
@@ -125,28 +104,8 @@
       "instagram": "https://www.instagram.com/lemakeba_marseille/",
       "website": ""
     },
-    "description": "Bar musical proposant des lives acoustiques et DJ sets soul/groove.",
-    "last_checked": "2026-10-10"
-  },
-  {
-    "id": "le-boogaloo",
-    "name": "Le Boogaloo",
-    "status": "active",
-    "address": "35 Boulevard Notre Dame, 13006 Marseille",
-    "neighborhood": "Vauban / Préfecture",
-    "lat": 43.2878,
-    "lng": 5.3762,
-    "categories": ["bar_musical"],
-    "genres": ["Funk", "Soul", "Disco", "Vinyl Sets"],
-    "capacity": 60,
-    "is_temporary": false,
-    "is_intimate": true,
-    "is_outdoor": false,
-    "links": {
-      "instagram": "https://www.instagram.com/leboogaloo_marseille/"
-    },
-    "description": "Bar à vinyles et petits live sessions dans une ambiance rétro/groovy.",
-    "last_checked": "2026-10-10"
+    "description": "Bar musical avec lives acoustiques et DJ sets soul/groove.",
+    "last_checked": "2026-10-11"
   },
   {
     "id": "cabaret-aleatoire",
@@ -167,8 +126,8 @@
       "instagram": "https://www.instagram.com/cabaretaleatoire/",
       "website": "https://cabaretaleatoire.com/"
     },
-    "description": "La grande salle clubbing & musiques actuelles de la Friche Belle de Mai.",
-    "last_checked": "2026-10-10"
+    "description": "Salle clubbing & musiques actuelles majeure de la Friche Belle de Mai.",
+    "last_checked": "2026-10-11"
   },
   {
     "id": "le-toit-terrasse-friche",
@@ -190,47 +149,7 @@
       "website": "https://www.lafriche.org"
     },
     "description": "Spot estival emblématique pour sunsets musicaux en open air.",
-    "last_checked": "2026-10-10"
-  },
-  {
-    "id": "les-grandes-tables-friche",
-    "name": "Les Grandes Tables de la Friche",
-    "status": "active",
-    "address": "41 Rue Jobin, 13003 Marseille",
-    "neighborhood": "Belle de Mai",
-    "lat": 43.3097,
-    "lng": 5.3898,
-    "categories": ["atypique", "jazz"],
-    "genres": ["Jazz", "Improvisation", "Acoustique"],
-    "capacity": 250,
-    "is_temporary": false,
-    "is_intimate": true,
-    "is_outdoor": false,
-    "links": {
-      "website": "https://lesgrandestables.com/"
-    },
-    "description": "Espace de restauration et de concerts de jazz/impro à la Friche.",
-    "last_checked": "2026-10-10"
-  },
-  {
-    "id": "le-poste-a-galene",
-    "name": "Le Poste à Galène",
-    "status": "active",
-    "address": "103 Rue Hilarion Chassaigne, 13003 Marseille",
-    "neighborhood": "Belle de Mai",
-    "lat": 43.3082,
-    "lng": 5.3879,
-    "categories": ["concert"],
-    "genres": ["Rock", "Metal", "Chanson", "Electro"],
-    "capacity": 300,
-    "is_temporary": false,
-    "is_intimate": true,
-    "is_outdoor": false,
-    "links": {
-      "instagram": "https://www.instagram.com/lepostezagalene/"
-    },
-    "description": "Salle rock historique de quartier.",
-    "last_checked": "2026-10-10"
+    "last_checked": "2026-10-11"
   },
   {
     "id": "le-dock-des-suds",
@@ -252,7 +171,7 @@
       "website": "https://www.docks-des-suds.org/"
     },
     "description": "Espace culturel et événementiel géant de la création cosmopolite.",
-    "last_checked": "2026-10-10"
+    "last_checked": "2026-10-11"
   },
   {
     "id": "laffranchi",
@@ -274,7 +193,7 @@
       "website": "https://www.l-affranchi.com/"
     },
     "description": "Scène de référence dédiée aux cultures urbaines et au rap.",
-    "last_checked": "2026-10-10"
+    "last_checked": "2026-10-11"
   },
   {
     "id": "le-pelle-mele",
@@ -293,8 +212,8 @@
     "links": {
       "instagram": "https://www.instagram.com/pellemellejazz/"
     },
-    "description": "Bar/club de jazz historique de la Place aux Huiles.",
-    "last_checked": "2026-10-10"
+    "description": "Bar/club de jazz historique sur la Place aux Huiles.",
+    "last_checked": "2026-10-11"
   },
   {
     "id": "la-caravelle",
@@ -316,7 +235,7 @@
       "website": "https://www.lacaravelle-marseille.com/"
     },
     "description": "Institution perchée avec balcon sur le port et concerts de jazz intimes.",
-    "last_checked": "2026-10-10"
+    "last_checked": "2026-10-11"
   },
   {
     "id": "theatre-de-loeuvre",
@@ -336,8 +255,8 @@
       "program": "https://www.theatre-de-loeuvre.com/",
       "instagram": "https://www.instagram.com/theatre.de.loeuvre/"
     },
-    "description": "Théâtre populaire accueillant des concerts du monde et formats acoustiques.",
-    "last_checked": "2026-10-10"
+    "description": "Théâtre citoyen accueillant des concerts du monde et acoustiques.",
+    "last_checked": "2026-10-11"
   },
   {
     "id": "la-guinguette-du-vallon",
@@ -356,8 +275,8 @@
     "links": {
       "instagram": "https://www.instagram.com/vallondesauffes/"
     },
-    "description": "Spot estival éphémère face aux pointus du Vallon.",
-    "last_checked": "2026-10-10"
+    "description": "Spot estival éphémère face aux pointus du Vallon des Auffes.",
+    "last_checked": "2026-10-11"
   },
   {
     "id": "parc-de-lescalette",
@@ -377,48 +296,8 @@
       "instagram": "https://www.instagram.com/friche_escalette/",
       "website": "https://friche-escalette.com/"
     },
-    "description": "Friche industrielle artistique accueillant des sessions musicales estivales.",
-    "last_checked": "2026-10-10"
-  },
-  {
-    "id": "le-vice-versa",
-    "name": "Vice Versa",
-    "status": "active",
-    "address": "40 Rue Curiol, 13001 Marseille",
-    "neighborhood": "La Plaine / Noailles",
-    "lat": 43.2952,
-    "lng": 5.3820,
-    "categories": ["bar_musical"],
-    "genres": ["Funk", "Soul", "Disco", "House"],
-    "capacity": 90,
-    "is_temporary": false,
-    "is_intimate": true,
-    "is_outdoor": false,
-    "links": {
-      "instagram": "https://www.instagram.com/viceversa_marseille/"
-    },
-    "description": "Bar décontracté avec programmation régulière de DJ local sets.",
-    "last_checked": "2026-10-10"
-  },
-  {
-    "id": "la-cite-de-la-musique",
-    "name": "Cité de la Musique de Marseille",
-    "status": "active",
-    "address": "4 Rue Bernard du Bois, 13001 Marseille",
-    "neighborhood": "Belsunce / Gare",
-    "lat": 43.2998,
-    "lng": 5.3789,
-    "categories": ["concert", "jazz"],
-    "genres": ["Jazz", "Classique", "World", "Pédagogique"],
-    "capacity": 300,
-    "is_temporary": false,
-    "is_intimate": true,
-    "is_outdoor": false,
-    "links": {
-      "website": "https://www.citemusique-marseille.com/"
-    },
-    "description": "Auditorium et lieu d'enseignement proposant des concerts de qualité.",
-    "last_checked": "2026-10-10"
+    "description": "Friche industrielle artistique entre mer et calanques.",
+    "last_checked": "2026-10-11"
   },
   {
     "id": "le-makeda",
@@ -438,35 +317,15 @@
       "program": "https://lemakeda.com/",
       "instagram": "https://www.instagram.com/lemakedamarseille/"
     },
-    "description": "Anciennement Poste à Galène, aujourd'hui salle dynamique orientée groove et live.",
-    "last_checked": "2026-10-10"
-  },
-  {
-    "id": "bar-les-bermudes",
-    "name": "Les Bermudes",
-    "status": "active",
-    "address": "7 Rue André Poggioli, 13006 Marseille",
-    "neighborhood": "Cours Julien",
-    "lat": 43.2921,
-    "lng": 5.3828,
-    "categories": ["bar_musical"],
-    "genres": ["Indie", "Electro", "Acoustique"],
-    "capacity": 50,
-    "is_temporary": false,
-    "is_intimate": true,
-    "is_outdoor": false,
-    "links": {
-      "instagram": "https://www.instagram.com/lesbermudesmarseille/"
-    },
-    "description": "Micro-bar culturel très chaleureux pour petits concerts et écoutes.",
-    "last_checked": "2026-10-10"
+    "description": "Salle dynamique et vibrante dédiée aux musiques actuelles et au groove.",
+    "last_checked": "2026-10-11"
   },
   {
     "id": "le-moulin",
     "name": "Le Moulin",
     "status": "active",
     "address": "47 Boulevard Métras, 13004 Marseille",
-    "neighborhood": "Chutes-Lavie / Blancarde",
+    "neighborhood": "Chutes-Lavie",
     "lat": 43.3112,
     "lng": 5.4051,
     "categories": ["concert"],
@@ -479,8 +338,8 @@
       "program": "https://www.lemoulin.org/",
       "instagram": "https://www.instagram.com/lemoulinmarseille/"
     },
-    "description": "Grande salle mythique marseillaise accueillant des artistes nationaux et internationaux.",
-    "last_checked": "2026-10-10"
+    "description": "Grande salle mythique marseillaise de concerts.",
+    "last_checked": "2026-10-11"
   },
   {
     "id": "theatre-silvain",
@@ -500,27 +359,7 @@
       "website": "https://www.marseille.fr/culture/cinema-et-spectacle-vivant/theatre-silvain"
     },
     "description": "Théâtre de verdure en plein air niché dans un vallon marin.",
-    "last_checked": "2026-10-10"
-  },
-  {
-    "id": "le-babel-community",
-    "name": "Babel Community Rooftop",
-    "status": "active",
-    "address": "21 Rue de la République, 13002 Marseille",
-    "neighborhood": "Vieux-Port / République",
-    "lat": 43.2981,
-    "lng": 5.3721,
-    "categories": ["bar_musical", "plein_air"],
-    "genres": ["DJ Set", "Acoustique", "Pop"],
-    "capacity": 120,
-    "is_temporary": false,
-    "is_intimate": true,
-    "is_outdoor": true,
-    "links": {
-      "instagram": "https://www.instagram.com/thebabelcommunity/"
-    },
-    "description": "Rooftop urbain accueillant des afterworks en musique et lives acoustiques.",
-    "last_checked": "2026-10-10"
+    "last_checked": "2026-10-11"
   },
   {
     "id": "le-chapiteau",
@@ -538,10 +377,10 @@
     "is_outdoor": true,
     "links": {
       "program": "https://lechapiteau-marseille.fr/",
-      "instagram": "https://www.instagram.com/lechapiteaudemarseille/"
+      "instagram": "https://www.instagram.com/le_chapiteau_marseille/"
     },
-    "description": "Lieu éco-responsable et alternatif avec jardin arboré pour soirées musicales.",
-    "last_checked": "2026-10-10"
+    "description": "Lieu éco-responsable et alternatif avec jardin arboré.",
+    "last_checked": "2026-10-11"
   },
   {
     "id": "l-embobineuse",
@@ -560,28 +399,88 @@
     "links": {
       "website": "https://lembobineuse.biz/"
     },
-    "description": "Théâtre inadapté et scène underground radicale et indépendante.",
-    "last_checked": "2026-10-10"
+    "description": "Théâtre inadapté et scène underground indépendante.",
+    "last_checked": "2026-10-11"
   },
   {
-    "id": "le-zef",
-    "name": "LE ZEF - Scène Nationale (Merlan)",
+    "id": "boum-marseille",
+    "name": "BOUM Marseille",
     "status": "active",
-    "address": "Avenue Raimu, 13014 Marseille",
-    "neighborhood": "Le Merlan",
-    "lat": 43.3325,
-    "lng": 5.4121,
-    "categories": ["theatre_culture"],
-    "genres": ["Création", "Musiques contemporaines", "World"],
-    "capacity": 500,
+    "address": "21 Rue André Poggiolo, 13006 Marseille",
+    "neighborhood": "Cours Julien",
+    "lat": 43.2923,
+    "lng": 5.3826,
+    "categories": ["bar_musical"],
+    "genres": ["Pop", "Disco", "Electro", "Inclusif"],
+    "capacity": 120,
+    "is_temporary": false,
+    "is_intimate": true,
+    "is_outdoor": false,
+    "links": {
+      "instagram": "https://www.instagram.com/boum_marseille/"
+    },
+    "description": "Bar culturel et festif inclusif au cœur du Cours Julien.",
+    "last_checked": "2026-10-11"
+  },
+  {
+    "id": "la-merveilleuse",
+    "name": "La Merveilleuse",
+    "status": "active",
+    "address": "18 Place Notre Dame du Mont, 13006 Marseille",
+    "neighborhood": "Notre-Dame du Mont",
+    "lat": 43.2918,
+    "lng": 5.3842,
+    "categories": ["bar_musical"],
+    "genres": ["Eclectique", "DJ Set", "Chill"],
+    "capacity": 90,
+    "is_temporary": false,
+    "is_intimate": true,
+    "is_outdoor": false,
+    "links": {
+      "instagram": "https://www.instagram.com/lamerveilleusebar/"
+    },
+    "description": "Bar convivial avec terrasse et sélections musicales variées.",
+    "last_checked": "2026-10-11"
+  },
+  {
+    "id": "la-place-des-canailles",
+    "name": "La Place des Canailles",
+    "status": "active",
+    "address": "10 Place de la Joliette, 13002 Marseille",
+    "neighborhood": "Joliette",
+    "lat": 43.3045,
+    "lng": 5.3672,
+    "categories": ["bar_musical", "atypique"],
+    "genres": ["Pop", "Disco", "DJ Set", "Live"],
+    "capacity": 400,
     "is_temporary": false,
     "is_intimate": false,
     "is_outdoor": false,
     "links": {
-      "website": "https://www.lezef.org/"
+      "instagram": "https://www.instagram.com/laplacedescanailles/"
     },
-    "description": "Scène nationale proposant des spectacles et concerts hybrides.",
-    "last_checked": "2026-10-10"
+    "description": "Espace festif aux Docks Village avec programmation musicale variée.",
+    "last_checked": "2026-10-11"
+  },
+  {
+    "id": "la-brasserie-communale",
+    "name": "La Brasserie Communale",
+    "status": "active",
+    "address": "57 Cours Julien, 13006 Marseille",
+    "neighborhood": "Cours Julien",
+    "lat": 43.2929,
+    "lng": 5.3842,
+    "categories": ["bar_musical"],
+    "genres": ["Jazz", "Acoustique", "Funk"],
+    "capacity": 120,
+    "is_temporary": false,
+    "is_intimate": true,
+    "is_outdoor": false,
+    "links": {
+      "instagram": "https://www.instagram.com/labrasseriecommunale/"
+    },
+    "description": "Brasserie artisanale proposant régulièrement concerts et jam sessions.",
+    "last_checked": "2026-10-11"
   },
   {
     "id": "spot-rooftop-les-terrasses",
@@ -600,28 +499,28 @@
     "links": {
       "instagram": "https://www.instagram.com/lerooftopmarseille/"
     },
-    "description": "Esplanade géante surplombant la mer pour soirées estivales.",
-    "last_checked": "2026-10-10"
+    "description": "Esplanade géante vue mer pour soirées et DJ sets estivaux.",
+    "last_checked": "2026-10-11"
   },
   {
-    "id": "le-chevaux-de-feu",
-    "name": "La Murette",
+    "id": "fort-saint-jean-mucem",
+    "name": "Mucem - Fort Saint-Jean",
     "status": "active",
-    "address": "Quai de la Tourette, 13002 Marseille",
-    "neighborhood": "Panier / MuCEM",
-    "lat": 43.2965,
-    "lng": 5.3638,
+    "address": "7 Promenade Robert Laffont, 13002 Marseille",
+    "neighborhood": "Vieux-Port / MuCEM",
+    "lat": 43.2968,
+    "lng": 5.3615,
     "categories": ["plein_air", "atypique"],
-    "genres": ["Acoustique", "DJ Set", "Chill"],
-    "capacity": 100,
+    "genres": ["Musiques du monde", "Acoustique", "Electro"],
+    "capacity": 600,
     "is_temporary": true,
-    "is_intimate": true,
+    "is_intimate": false,
     "is_outdoor": true,
     "links": {
-      "instagram": "https://www.instagram.com/lamurettemarseille/"
+      "website": "https://www.mucem.org/"
     },
-    "description": "Micro-spot éphémère en bord de mer près de la Major.",
-    "last_checked": "2026-10-10"
+    "description": "Cadre historique unique pour événements musicaux en plein air.",
+    "last_checked": "2026-10-11"
   },
   {
     "id": "conservatoire-pierre-barbizet",
@@ -640,87 +539,7 @@
     "links": {
       "website": "https://conservatoire.marseille.fr/"
     },
-    "description": "Palais des Arts accueillant auditions et récitals publics gratuits ou accessibles.",
-    "last_checked": "2026-10-10"
-  },
-  {
-    "id": "klap-maison-pour-la-danse",
-    "name": "KLAP Maison pour la danse",
-    "status": "active",
-    "address": "5 Avenue Rostand, 13003 Marseille",
-    "neighborhood": "Saint-Mauront",
-    "lat": 43.3135,
-    "lng": 5.3812,
-    "categories": ["theatre_culture", "atypique"],
-    "genres": ["Expérimental", "Performance", "Création sonore"],
-    "capacity": 250,
-    "is_temporary": false,
-    "is_intimate": true,
-    "is_outdoor": false,
-    "links": {
-      "website": "http://www.kelemenis.fr/"
-    },
-    "description": "Centre de création chorégraphique et sonore contemporain.",
-    "last_checked": "2026-10-10"
-  },
-  {
-    "id": "brasserie-communale",
-    "name": "La Brasserie Communale",
-    "status": "active",
-    "address": "57 Cours Julien, 13006 Marseille",
-    "neighborhood": "Cours Julien",
-    "lat": 43.2929,
-    "lng": 5.3842,
-    "categories": ["bar_musical"],
-    "genres": ["Jazz", "Acoustique", "Funk"],
-    "capacity": 120,
-    "is_temporary": false,
-    "is_intimate": true,
-    "is_outdoor": false,
-    "links": {
-      "instagram": "https://www.instagram.com/labrasseriecommunale/"
-    },
-    "description": "Lieu de vie et artisanat local avec concerts hebdomadaires et jams.",
-    "last_checked": "2026-10-10"
-  },
-  {
-    "id": "fort-saint-jean-mucem",
-    "name": "Mucem - Cour du Fort Saint-Jean",
-    "status": "active",
-    "address": "7 Promenade Robert Laffont, 13002 Marseille",
-    "neighborhood": "Vieux-Port / MuCEM",
-    "lat": 43.2968,
-    "lng": 5.3615,
-    "categories": ["plein_air", "atypique"],
-    "genres": ["Musiques du monde", "Acoustique", "Electro-chicha"],
-    "capacity": 600,
-    "is_temporary": true,
-    "is_intimate": false,
-    "is_outdoor": true,
-    "links": {
-      "website": "https://www.mucem.org/"
-    },
-    "description": "Cadre historique exceptionnel pour programmations musicales estivales.",
-    "last_checked": "2026-10-10"
-  },
-  {
-    "id": "le-corbusier-rooftop",
-    "name": "MAMO / Toit de la Cité Radieuse",
-    "status": "active",
-    "address": "280 Boulevard Michelet, 13008 Marseille",
-    "neighborhood": "Sainte-Anne / Le Corbusier",
-    "lat": 43.2614,
-    "lng": 5.3965,
-    "categories": ["atypique", "plein_air"],
-    "genres": ["Ambient", "Acoustique", "Electro soft"],
-    "capacity": 150,
-    "is_temporary": true,
-    "is_intimate": true,
-    "is_outdoor": true,
-    "links": {
-      "website": "https://mamo.fr/"
-    },
-    "description": "Toit-terrasse mythique de la Cité Radieuse accueillant ponctuellement des performances.",
-    "last_checked": "2026-10-10"
+    "description": "Palais des Arts accueillant auditions et récitals publics.",
+    "last_checked": "2026-10-11"
   }
 ]
