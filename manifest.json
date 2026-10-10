@@ -1,0 +1,10 @@
+{
+  "short_name": "Barde",
+  "name": "Barde · Marseille Guide Musical",
+  "icons": [],
+  "start_url": "./index.html",
+  "background_color": "#121212",
+  "theme_color": "#121212",
+  "display": "standalone",
+  "orientation": "portrait"
+}
