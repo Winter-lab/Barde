@@ -25,6 +25,8 @@ function initFilters(placesData, onFilterChange) {
 }
 
 function applyFilters(placesData, callback) {
+  const favorites = JSON.parse(localStorage.getItem('barde_favorites') || '[]');
+
   const filtered = placesData.filter(place => {
     const matchesSearch = 
       place.name.toLowerCase().includes(activeFilters.search) ||
@@ -37,6 +39,7 @@ function applyFilters(placesData, callback) {
 
     const cat = activeFilters.category;
     if (cat === 'all') return true;
+    if (cat === 'favorites') return favorites.includes(place.id);
     if (cat === 'ephemeral') return place.is_temporary === true;
     if (cat === 'intimate') return place.is_intimate === true;
     
