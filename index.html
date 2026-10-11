@@ -23,11 +23,13 @@
     <div class="search-container">
       <span class="search-icon">🔍</span>
       <input type="text" id="search-input" placeholder="Lieu, quartier, genre..." autocomplete="off">
+      <span id="places-count" class="places-count">0 lieu</span>
     </div>
   </header>
 
   <nav class="filters-bar">
     <button class="filter-btn active" data-filter="all">Tous</button>
+    <button class="filter-btn" data-filter="favorites">❤️ Favoris</button>
     <button class="filter-btn" data-filter="concert">🎤 Concert</button>
     <button class="filter-btn" data-filter="bar_musical">🍻 Bar / Café</button>
     <button class="filter-btn" data-filter="jazz">🎷 Jazz</button>
@@ -37,8 +39,10 @@
     <button class="filter-btn" data-filter="atypique">🎪 Atypique</button>
   </nav>
 
+  <!-- Bouton GPS -->
   <button id="btn-locate" class="btn-locate" title="Me géolocaliser">📍</button>
 
+  <!-- Panel de détail -->
   <div id="place-panel" class="place-panel">
     <div class="sheet-handle"></div>
     <div id="panel-content"></div>

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'barde-v1';
+const CACHE_NAME = 'barde-v4';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -40,12 +40,6 @@ self.addEventListener('fetch', (e) => {
         return cachedResponse;
       }
       return fetch(e.request).then((networkResponse) => {
-        if (e.request.url.includes('tile.openstreetmap.org')) {
-          const responseToCache = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(e.request, responseToCache);
-          });
-        }
         return networkResponse;
       });
     })
