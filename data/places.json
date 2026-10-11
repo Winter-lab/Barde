@@ -7,8 +7,16 @@
     "neighborhood": "Cours Julien",
     "lat": 43.2912,
     "lng": 5.3831,
-    "categories": ["concert"],
-    "genres": ["Rock", "Punk", "Reggae", "Dub", "World"],
+    "categories": [
+      "concert"
+    ],
+    "genres": [
+      "Rock",
+      "Punk",
+      "Reggae",
+      "Dub",
+      "World"
+    ],
     "capacity": 200,
     "is_temporary": false,
     "is_intimate": true,
@@ -29,8 +37,16 @@
     "neighborhood": "Cours Julien",
     "lat": 43.2925,
     "lng": 5.3838,
-    "categories": ["concert"],
-    "genres": ["Pop", "Hip-Hop", "Electro", "Rock", "Chanson"],
+    "categories": [
+      "concert"
+    ],
+    "genres": [
+      "Pop",
+      "Hip-Hop",
+      "Electro",
+      "Rock",
+      "Chanson"
+    ],
     "capacity": 1000,
     "is_temporary": false,
     "is_intimate": false,
@@ -51,8 +67,16 @@
     "neighborhood": "La Plaine",
     "lat": 43.2941,
     "lng": 5.3849,
-    "categories": ["bar_musical", "concert"],
-    "genres": ["Rock", "Indie", "Jam Session", "Funk"],
+    "categories": [
+      "bar_musical",
+      "concert"
+    ],
+    "genres": [
+      "Rock",
+      "Indie",
+      "Jam Session",
+      "Funk"
+    ],
     "capacity": 150,
     "is_temporary": false,
     "is_intimate": true,
@@ -72,8 +96,16 @@
     "neighborhood": "Réformés / Longchamp",
     "lat": 43.3005,
     "lng": 5.3852,
-    "categories": ["concert", "jazz"],
-    "genres": ["Flamenco", "World", "Acoustique", "Jazz"],
+    "categories": [
+      "concert",
+      "jazz"
+    ],
+    "genres": [
+      "Flamenco",
+      "World",
+      "Acoustique",
+      "Jazz"
+    ],
     "capacity": 80,
     "is_temporary": false,
     "is_intimate": true,
@@ -94,8 +126,15 @@
     "neighborhood": "Castellane",
     "lat": 43.2889,
     "lng": 5.3821,
-    "categories": ["bar_musical"],
-    "genres": ["Soul", "Funk", "Afrobeat", "DJ Set"],
+    "categories": [
+      "bar_musical"
+    ],
+    "genres": [
+      "Soul",
+      "Funk",
+      "Afrobeat",
+      "DJ Set"
+    ],
     "capacity": 100,
     "is_temporary": false,
     "is_intimate": true,
@@ -115,8 +154,16 @@
     "neighborhood": "Belle de Mai",
     "lat": 43.3104,
     "lng": 5.3908,
-    "categories": ["concert"],
-    "genres": ["Electro", "House", "Techno", "Hip-Hop", "Pop"],
+    "categories": [
+      "concert"
+    ],
+    "genres": [
+      "Electro",
+      "House",
+      "Techno",
+      "Hip-Hop",
+      "Pop"
+    ],
     "capacity": 1200,
     "is_temporary": false,
     "is_intimate": false,
@@ -135,10 +182,18 @@
     "status": "active",
     "address": "41 Rue Jobin, 13003 Marseille",
     "neighborhood": "Belle de Mai",
-    "lat": 43.3100,
+    "lat": 43.31,
     "lng": 5.3902,
-    "categories": ["concert", "plein_air"],
-    "genres": ["Electro", "Disco", "Ambient", "World"],
+    "categories": [
+      "concert",
+      "plein_air"
+    ],
+    "genres": [
+      "Electro",
+      "Disco",
+      "Ambient",
+      "World"
+    ],
     "capacity": 800,
     "is_temporary": false,
     "is_intimate": false,
@@ -158,9 +213,17 @@
     "address": "12 Rue Urbain V, 13002 Marseille",
     "neighborhood": "Joliette / Arenc",
     "lat": 43.3155,
-    "lng": 5.3670,
-    "categories": ["concert", "atypique"],
-    "genres": ["Musiques du monde", "Electro", "Reggae", "Dub"],
+    "lng": 5.367,
+    "categories": [
+      "concert",
+      "atypique"
+    ],
+    "genres": [
+      "Musiques du monde",
+      "Electro",
+      "Reggae",
+      "Dub"
+    ],
     "capacity": 5000,
     "is_temporary": false,
     "is_intimate": false,
@@ -181,8 +244,15 @@
     "neighborhood": "Cinq Avenues / St Just",
     "lat": 43.3085,
     "lng": 5.4012,
-    "categories": ["concert"],
-    "genres": ["Hip-Hop", "Rap", "Metal", "Rock"],
+    "categories": [
+      "concert"
+    ],
+    "genres": [
+      "Hip-Hop",
+      "Rap",
+      "Metal",
+      "Rock"
+    ],
     "capacity": 400,
     "is_temporary": false,
     "is_intimate": true,
@@ -203,8 +273,16 @@
     "neighborhood": "Vieux-Port",
     "lat": 43.2928,
     "lng": 5.3725,
-    "categories": ["jazz", "bar_musical"],
-    "genres": ["Jazz", "Bossa Nova", "Blues", "Acoustique"],
+    "categories": [
+      "jazz",
+      "bar_musical"
+    ],
+    "genres": [
+      "Jazz",
+      "Bossa Nova",
+      "Blues",
+      "Acoustique"
+    ],
     "capacity": 70,
     "is_temporary": false,
     "is_intimate": true,
@@ -223,8 +301,15 @@
     "neighborhood": "Vieux-Port / Panier",
     "lat": 43.2958,
     "lng": 5.3712,
-    "categories": ["bar_musical", "jazz"],
-    "genres": ["Jazz", "Chanson", "Acoustique"],
+    "categories": [
+      "bar_musical",
+      "jazz"
+    ],
+    "genres": [
+      "Jazz",
+      "Chanson",
+      "Acoustique"
+    ],
     "capacity": 90,
     "is_temporary": false,
     "is_intimate": true,
@@ -245,8 +330,15 @@
     "neighborhood": "Belsunce",
     "lat": 43.2974,
     "lng": 5.3778,
-    "categories": ["theatre_culture", "concert"],
-    "genres": ["Musiques du monde", "Chanson", "Jazz"],
+    "categories": [
+      "theatre_culture",
+      "concert"
+    ],
+    "genres": [
+      "Musiques du monde",
+      "Chanson",
+      "Jazz"
+    ],
     "capacity": 200,
     "is_temporary": false,
     "is_intimate": true,
@@ -266,8 +358,15 @@
     "neighborhood": "Vallon des Auffes",
     "lat": 43.2852,
     "lng": 5.3508,
-    "categories": ["bar_musical", "plein_air"],
-    "genres": ["DJ Set", "Acoustique", "Funk"],
+    "categories": [
+      "bar_musical",
+      "plein_air"
+    ],
+    "genres": [
+      "DJ Set",
+      "Acoustique",
+      "Funk"
+    ],
     "capacity": 80,
     "is_temporary": true,
     "is_intimate": true,
@@ -286,8 +385,15 @@
     "neighborhood": "Les Goudes",
     "lat": 43.2185,
     "lng": 5.3488,
-    "categories": ["atypique", "plein_air"],
-    "genres": ["Ambient", "Acoustique", "Expérimental"],
+    "categories": [
+      "atypique",
+      "plein_air"
+    ],
+    "genres": [
+      "Ambient",
+      "Acoustique",
+      "Expérimental"
+    ],
     "capacity": 150,
     "is_temporary": true,
     "is_intimate": true,
@@ -307,8 +413,16 @@
     "neighborhood": "La Plaine",
     "lat": 43.2933,
     "lng": 5.3868,
-    "categories": ["concert"],
-    "genres": ["Soul", "Funk", "Hip-Hop", "World", "Live Sets"],
+    "categories": [
+      "concert"
+    ],
+    "genres": [
+      "Soul",
+      "Funk",
+      "Hip-Hop",
+      "World",
+      "Live Sets"
+    ],
     "capacity": 300,
     "is_temporary": false,
     "is_intimate": true,
@@ -328,8 +442,16 @@
     "neighborhood": "Chutes-Lavie",
     "lat": 43.3112,
     "lng": 5.4051,
-    "categories": ["concert"],
-    "genres": ["Rock", "Metal", "Reggae", "Hip-Hop", "Pop"],
+    "categories": [
+      "concert"
+    ],
+    "genres": [
+      "Rock",
+      "Metal",
+      "Reggae",
+      "Hip-Hop",
+      "Pop"
+    ],
     "capacity": 1500,
     "is_temporary": false,
     "is_intimate": false,
@@ -349,8 +471,16 @@
     "neighborhood": "Endoume / Malmousque",
     "lat": 43.2801,
     "lng": 5.3512,
-    "categories": ["plein_air", "concert"],
-    "genres": ["Chanson", "World", "Pop", "Jazz"],
+    "categories": [
+      "plein_air",
+      "concert"
+    ],
+    "genres": [
+      "Chanson",
+      "World",
+      "Pop",
+      "Jazz"
+    ],
     "capacity": 4000,
     "is_temporary": false,
     "is_intimate": false,
@@ -369,8 +499,16 @@
     "neighborhood": "Belle de Mai",
     "lat": 43.3142,
     "lng": 5.3921,
-    "categories": ["atypique", "plein_air"],
-    "genres": ["Electro", "Dub", "House", "Eclectique"],
+    "categories": [
+      "atypique",
+      "plein_air"
+    ],
+    "genres": [
+      "Electro",
+      "Dub",
+      "House",
+      "Eclectique"
+    ],
     "capacity": 600,
     "is_temporary": false,
     "is_intimate": false,
@@ -390,8 +528,16 @@
     "neighborhood": "Belle de Mai / Saint-Mauront",
     "lat": 43.3121,
     "lng": 5.3854,
-    "categories": ["atypique", "concert"],
-    "genres": ["Noise", "Punk", "Expérimental", "Underground"],
+    "categories": [
+      "atypique",
+      "concert"
+    ],
+    "genres": [
+      "Noise",
+      "Punk",
+      "Expérimental",
+      "Underground"
+    ],
     "capacity": 180,
     "is_temporary": false,
     "is_intimate": true,
@@ -410,8 +556,15 @@
     "neighborhood": "Cours Julien",
     "lat": 43.2923,
     "lng": 5.3826,
-    "categories": ["bar_musical"],
-    "genres": ["Pop", "Disco", "Electro", "Inclusif"],
+    "categories": [
+      "bar_musical"
+    ],
+    "genres": [
+      "Pop",
+      "Disco",
+      "Electro",
+      "Inclusif"
+    ],
     "capacity": 120,
     "is_temporary": false,
     "is_intimate": true,
@@ -430,8 +583,14 @@
     "neighborhood": "Notre-Dame du Mont",
     "lat": 43.2918,
     "lng": 5.3842,
-    "categories": ["bar_musical"],
-    "genres": ["Eclectique", "DJ Set", "Chill"],
+    "categories": [
+      "bar_musical"
+    ],
+    "genres": [
+      "Eclectique",
+      "DJ Set",
+      "Chill"
+    ],
     "capacity": 90,
     "is_temporary": false,
     "is_intimate": true,
@@ -450,8 +609,16 @@
     "neighborhood": "Joliette",
     "lat": 43.3045,
     "lng": 5.3672,
-    "categories": ["bar_musical", "atypique"],
-    "genres": ["Pop", "Disco", "DJ Set", "Live"],
+    "categories": [
+      "bar_musical",
+      "atypique"
+    ],
+    "genres": [
+      "Pop",
+      "Disco",
+      "DJ Set",
+      "Live"
+    ],
     "capacity": 400,
     "is_temporary": false,
     "is_intimate": false,
@@ -470,8 +637,14 @@
     "neighborhood": "Cours Julien",
     "lat": 43.2929,
     "lng": 5.3842,
-    "categories": ["bar_musical"],
-    "genres": ["Jazz", "Acoustique", "Funk"],
+    "categories": [
+      "bar_musical"
+    ],
+    "genres": [
+      "Jazz",
+      "Acoustique",
+      "Funk"
+    ],
     "capacity": 120,
     "is_temporary": false,
     "is_intimate": true,
@@ -490,8 +663,15 @@
     "neighborhood": "Joliette",
     "lat": 43.3082,
     "lng": 5.3645,
-    "categories": ["plein_air", "bar_musical"],
-    "genres": ["Electro", "Disco", "DJ Sets"],
+    "categories": [
+      "plein_air",
+      "bar_musical"
+    ],
+    "genres": [
+      "Electro",
+      "Disco",
+      "DJ Sets"
+    ],
     "capacity": 1500,
     "is_temporary": true,
     "is_intimate": false,
@@ -510,8 +690,15 @@
     "neighborhood": "Vieux-Port / MuCEM",
     "lat": 43.2968,
     "lng": 5.3615,
-    "categories": ["plein_air", "atypique"],
-    "genres": ["Musiques du monde", "Acoustique", "Electro"],
+    "categories": [
+      "plein_air",
+      "atypique"
+    ],
+    "genres": [
+      "Musiques du monde",
+      "Acoustique",
+      "Electro"
+    ],
     "capacity": 600,
     "is_temporary": true,
     "is_intimate": false,
@@ -530,8 +717,15 @@
     "neighborhood": "Noailles / Palais des Arts",
     "lat": 43.2961,
     "lng": 5.3822,
-    "categories": ["theatre_culture", "jazz"],
-    "genres": ["Classique", "Jazz", "Chambre"],
+    "categories": [
+      "theatre_culture",
+      "jazz"
+    ],
+    "genres": [
+      "Classique",
+      "Jazz",
+      "Chambre"
+    ],
     "capacity": 300,
     "is_temporary": false,
     "is_intimate": true,
@@ -540,6 +734,141 @@
       "website": "https://conservatoire.marseille.fr/"
     },
     "description": "Palais des Arts accueillant auditions et récitals publics.",
+    "last_checked": "2026-10-11"
+  },
+  {
+    "id": "zoumai",
+    "name": "Le Zoumaï",
+    "status": "active",
+    "address": "7 Cours Gouffé, 13006 Marseille",
+    "neighborhood": "Castellane / 6e",
+    "lat": 43.2872,
+    "lng": 5.3854,
+    "categories": [
+      "bar_musical",
+      "concert"
+    ],
+    "genres": [
+      "Bières artisanales",
+      "Live",
+      "Éclectique"
+    ],
+    "capacity": 150,
+    "is_temporary": false,
+    "is_intimate": true,
+    "is_outdoor": false,
+    "links": {
+      "instagram": "https://www.instagram.com/brasserie_zoumai/",
+      "website": "https://zoumai.com/"
+    },
+    "description": "Premier brewpub bio de Marseille proposant concerts et événements au cœur du 6e.",
+    "last_checked": "2026-10-11"
+  },
+  {
+    "id": "yuzu-record-bar",
+    "name": "Yuzu Record Bar",
+    "status": "active",
+    "address": "36 Rue d'Aubagne, 13001 Marseille",
+    "neighborhood": "Noailles",
+    "lat": 43.2945,
+    "lng": 5.3789,
+    "categories": [
+      "bar_musical",
+      "jazz"
+    ],
+    "genres": [
+      "Audiophile",
+      "Groove",
+      "DJ Sets",
+      "Électronique"
+    ],
+    "capacity": 80,
+    "is_temporary": false,
+    "is_intimate": true,
+    "is_outdoor": false,
+    "links": {
+      "instagram": "https://www.instagram.com/yuzurecordbar/"
+    },
+    "description": "Bar audiophile hybride, galerie et système son pointu rue d'Aubagne.",
+    "last_checked": "2026-10-11"
+  },
+  {
+    "id": "double-zero",
+    "name": "Double Zéro",
+    "status": "active",
+    "address": "8 Rue Briffaut, 13005 Marseille",
+    "neighborhood": "Le Camas",
+    "lat": 43.2948,
+    "lng": 5.3912,
+    "categories": [
+      "bar_musical"
+    ],
+    "genres": [
+      "Vins naturels",
+      "Vinyles",
+      "Jazz",
+      "Chill"
+    ],
+    "capacity": 60,
+    "is_temporary": false,
+    "is_intimate": true,
+    "is_outdoor": false,
+    "links": {
+      "instagram": "https://www.instagram.com/doublezero.marseille/"
+    },
+    "description": "Cave à manger audiophile au Camas mariant bons vins et platines vinyles.",
+    "last_checked": "2026-10-11"
+  },
+  {
+    "id": "solstice",
+    "name": "Solstice",
+    "status": "active",
+    "address": "27 Rue Sylvabelle, 13006 Marseille",
+    "neighborhood": "Préfecture",
+    "lat": 43.2895,
+    "lng": 5.3785,
+    "categories": [
+      "bar_musical"
+    ],
+    "genres": [
+      "Cocktails",
+      "DJ Sets",
+      "Audiophile"
+    ],
+    "capacity": 90,
+    "is_temporary": false,
+    "is_intimate": true,
+    "is_outdoor": false,
+    "links": {
+      "instagram": "https://www.instagram.com/solstice.marseille/"
+    },
+    "description": "Spot solaire et feutré derrière la Préfecture avec sélections audiophiles et cocktails.",
+    "last_checked": "2026-10-11"
+  },
+  {
+    "id": "le-marlin",
+    "name": "Le Marlin",
+    "status": "active",
+    "address": "7 Place aux Huiles, 13001 Marseille",
+    "neighborhood": "Vieux-Port",
+    "lat": 43.2927,
+    "lng": 5.3724,
+    "categories": [
+      "bar_musical"
+    ],
+    "genres": [
+      "Dancefloor",
+      "Électro",
+      "Good Vibes"
+    ],
+    "capacity": 110,
+    "is_temporary": false,
+    "is_intimate": true,
+    "is_outdoor": false,
+    "links": {
+      "instagram": "https://www.instagram.com/lemarlin.marseille/"
+    },
+    "description": "Renaissance festive et vibrante d'une adresse mythique de la Place aux Huiles.",
     "last_checked": "2026-10-11"
   }
 ]
